@@ -1,0 +1,291 @@
+.about{
+	
+	/* G r a d i e n t e */
+	&__gradiente {
+		@extend %gradiente-background-azul-verde;	
+		height: 27vh;
+	}
+
+	&__header {
+
+		&--container {
+			border-bottom: 1px solid #FFF;
+		    margin: 0 auto;
+		    padding-left: 10%;
+		    padding-right: 10%;
+		    @include under(md) {
+				padding-left: 5%;
+		    	padding-right: 5%;
+		    }
+		    @include under(crunch) {
+				padding-left: 1%;
+		    	padding-right: 1%;
+		    }
+		}
+	}
+
+	&__ttl {
+		@extend %title-pages;
+		@include under(sm) {
+			margin-top: 5%;
+		}
+	}
+
+	&__flex {
+		
+		&--center {
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	/* F r a s e */
+	&__frase {
+		padding: 100px 0 ;
+		@include under(sm) {
+	        padding: 60px 0 ;
+	    }
+	    @include under(sm-mobile) {
+	        padding: 40px 0 ;
+	    }
+		
+		&--contenedor {
+			width: 50vw;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			@include under(lg){
+				width: 70vw;
+			}
+			@include under(sm){
+				width: 88vw;
+			}
+
+			.text-center {
+				@extend %gradiente-texto-azul-verde;
+				@extend %frase-about;
+		
+				span {
+					@extend %gradiente-texto-azul-verde;	
+					font-size: 70px;
+					font-weight: bold;
+					@include under(sm-mobile){
+						font-size: 45px;
+						line-height: 50px;
+					}
+					@include under(invitation){
+						font-size: 34px;
+						line-height: 40px;
+					}
+				}
+
+				p {
+					@extend %gradiente-texto-azul-verde;
+					font-size: 45px;
+					font-weight: 500;
+					display: block;
+					@include under(sm-mobile){
+						font-size: 35px;
+					}
+					@include under(invitation){
+						font-size: 24px;
+					}
+				}
+			}
+		}
+	}
+
+	/* I m a g e n   M o n e y */
+	&__box-img {
+
+	}
+
+	&__img-money {
+		width: 80%;
+		margin: 0 auto;
+		@include under(invitation){
+			width: 90%;
+		}
+	}
+
+	/* I c o n o s */
+	.iconos {
+
+		&__contenedor {
+			width: 80vw;
+			margin: 0 auto;
+			@include under(sm) {
+		        width: 95vw;
+		    }
+		}
+
+		&__lista{
+			
+			&--flex{
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			&--item {
+				width: calc(100% / 3);
+				text-align: center;
+				margin-bottom: 100px;
+				@include under(sm) {
+			        margin-bottom: 60px;
+			    }
+			    @include under(sm-mobile) {
+			        margin-bottom: 40px;
+			    }
+
+				img {
+					width: 50%;
+					margin: 0 auto;
+					@include under(sm-mobile) {
+				        width: 75%;
+				    }
+				}
+				p {
+					@extend %paragraph-about-iconos;
+					margin-top: 30px;
+					@include under(sm-mobile) {
+						margin-top: 17px;
+				    }
+
+					&.two {
+						&:after {
+							content: '2';
+							@extend %label-condiciones-iconos;
+						}
+					}
+
+					&.seven {
+						&:after {
+							content: '7';
+							@extend %label-condiciones-iconos;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	/* T e x t o */
+	.texto {
+
+		&__contenedor {
+			@extend %paragraph-about-texto;
+			width: 80vw;
+			margin: 0 auto 100px;
+			@include under(sm) {
+		        width: 91vw;
+				margin: 0 auto 60px;
+		    }
+		    @include under(sm-mobile) {
+				margin: 0 auto 40px;
+		    }
+
+			.gotham {
+				font-family: f(comic);
+			}
+			.bold {
+				font-family: f(comic);
+			}
+		}
+
+		&__firma {
+			font-family: f(comic);
+			text-align: center;
+			font-weight: 500;
+			font-size: 34px;
+			color: c(gray-light);
+			@include under(sm-mobile) {
+				font-size: 28px;
+		    }	
+		}
+
+		&__img-firma {
+			width: 50%;
+			margin: 60px auto 100px;
+			@include under(sm) {
+				margin: 60px auto;
+		    }
+		    @include under(sm-mobile) {
+				margin: 40px auto;
+		    }
+		    @include under(invitation) {
+				width: 70%;
+		    }
+		}
+	}
+
+	/* L o g o s */
+	.logos {
+		margin-bottom: 120px;
+		@include under(md) {
+			margin-bottom: 60px;
+	    }
+	    @include under(sm-mobile) {
+			margin-bottom: 40px;
+	    }
+
+		&__contenedor {
+			width: 85vw;
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			@include under(md) {
+				flex-direction: column;
+		    }
+		}
+
+		&__box-img {
+			width: 25%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include under(md) {
+				margin-bottom: 30px;
+				width: 80%;
+		    }
+
+			&.column {
+				flex-direction: column;
+
+				img {
+					margin: 10px;
+					@include under(md) {
+						margin: 10px 0;	
+				    }
+				}
+			}
+		}
+
+		&__img {
+			width: auto;
+
+			&.primero {
+				@include under(invitation) {
+					width: 45%;
+				}
+			}
+
+			
+
+			&.tercero {
+				@include under(invitation) {
+					
+				}
+			}
+
+			&.cuarto {
+				@include under(invitation) {
+					
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,305 @@
+%paragraph {
+    font-family: f(sans);
+    font-size: 22px;
+    font-weight: normal;
+    color: c();
+    line-height: lh(lg);
+}
+
+%paragraph-small {
+    @extend %paragraph;
+    font-size: 15px;
+    font-weight: 200;
+    color: c();
+    line-height: lh(md);
+}
+
+
+/* A b o u t */
+%paragraph-about-iconos, .paragraph-about-iconos {
+    font-family: f(comic);
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 30px;
+    color: c(green);
+    @include under(lg){
+        font-size: 23px;
+        line-height: 28px;
+    }
+    @include under(bag){
+        font-size: 19px;
+        line-height: 25px;
+    }
+    @include under(sm){
+        font-size: 16px;
+        line-height: 23px;
+    }
+    @include under(xs) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+%paragraph-about-texto, .paragraph-about-texto {
+    font-family: f(sans);
+    font-size: 28px;
+    line-height: 34px;
+    color: c(gray-light);
+    @include under(sm) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+/* C o n t a c t o */
+%paragraph-contacto-frase, .paragraph-contacto-frase {
+    font-family: f(sans);
+    font-size: 43px;
+    color: c(gray-light);
+    @include under(md) {
+        font-size: 35px;
+    }
+    @include under(sm-mobile) {
+        font-size: 28px;
+    }
+}
+
+%paragraph-contacto-frase-verde, .paragraph-contacto-frase-verde {
+    font-family: f(comic);
+    font-size: 43px;
+    color: c(green);
+    font-weight: bold;
+    @include under(md) {
+        font-size: 35px;
+    }
+    @include under(sm-mobile) {
+        font-size: 28px;
+    }
+}
+
+%paragraph-contacto-customer, .paragraph-contacto-customer {
+    font-family: f(comic);
+    font-size: 35px;
+    font-weight: 500;
+    color: c(gray-light);
+    @include under(md) {
+        font-size: 30px;
+    }
+    @include under(sm-mobile) {
+        font-size: 24px;
+    }
+}
+
+%paragraph-contacto-telefono, .paragraph-contacto-telefono {
+    font-family: f(comic);
+    font-size: 43px;
+    font-weight: 500;
+    color: c(green);
+    @include under(md) {
+        font-size: 35px;
+    }
+    @include under(sm-mobile) {
+        font-size: 28px;
+    }
+}
+
+%paragraph-contacto-pasos, .paragraph-contacto-pasos {
+    font-family: f(sans);
+    font-size: 25px;
+    font-weight: normal;
+    color: c(gray-light);
+    @include under(md) {
+        font-size: 20px;
+    }
+    @include under(sm-mobile) {
+        font-size: 16px;
+    }
+}
+
+%paragraph-contacto-pasos-titulo, .paragraph-contacto-pasos-titulo {
+    font-family: f(comic);
+    font-size: 30px;    
+    font-weight: bold;
+    @include under(md) {
+        font-size: 24px;
+    }
+    @include under(sm-mobile) {
+        font-size: 20px;
+    }
+}
+
+/* C a r */
+%paragraph-car-frase, .paragraph-car-frase {
+    font-family: f(comic);
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 40px;
+    @include under(bag){
+        font-size: 22px;
+    }
+    @include under(invitation){
+        font-size: 16px;
+        line-height: 30px;
+    }
+}
+
+%paragraph-car-frase-grande, .paragraph-car-frase-grande {
+    font-family: f(comic);
+    font-size: 45px;
+    font-weight: bold;
+    @include under(bag){
+        font-size: 38px;
+    }
+    @include under(invitation){
+        font-size: 34px;
+    }
+}
+
+%paragraph-car-just, .paragraph-car-just {
+    font-family: f(comic);
+    font-size: 34px;
+    color: c(gray-light);
+    font-weight: 100;
+    @include under(bag){
+        font-size: 26px;
+    }
+    @include under(invitation){
+        font-size: 22px;
+    }
+}
+
+%paragraph-car-your-money, .paragraph-car-your-money {
+    @extend %paragraph-car-frase-grande;
+    font-weight: 100;
+}
+
+/* P r e s s  */
+%paragraph-press-texto, .paragraph-press-texto {
+    font-size: 32px;
+    line-height: 42px;
+    font-family: f(comic);
+    font-weight: normal;
+    color: c(gray-light);
+    letter-spacing: -.3px;
+    @include under(bag){
+        font-size: 24px;
+        line-height: 28px;
+    }
+    @include under(invitation){
+        font-size: 20px;
+    }
+}
+
+%paragraph-press-iconos, .paragraph-press-iconos {
+    @extend %paragraph-about-iconos;
+    color: c(purple);
+}
+
+%paragraph-press-iconos-grande, .paragraph-press-iconos-grande {
+    @extend %paragraph-press-iconos;
+    font-size: 38px;
+    line-height: 40px;
+    font-weight: bold;
+    @include under(lg){
+        font-size: 25px;
+        line-height: 28px;
+    }
+    @include under(invitation){
+        font-size: 17px;
+        line-height: 20px;
+    }
+    @include under(xs){
+        font-size: 14px;
+    }
+
+} 
+
+/* P a r t n e r */
+%paragraph-partner-personaje, .paragraph-partner-personaje {
+    font-family: f(comic);
+    font-size: 36px;
+    font-weight: bold;
+    color: c(purple);
+    @include under(md){
+        font-size: 28px;
+    }
+    @include under(sm){
+        font-size: 17px;
+    }
+}
+
+%frase-iconos-doing, .frase-iconos-doing {
+    font-family: f(comic);
+    font-size: 28px;
+    font-weight: bold;
+    color: c(pink);
+    text-align: center;
+    @include under(contactForm){
+        font-size: 22px;
+    }
+    @include under(bag){
+        font-size: 17px;
+    }
+    @include under(xs){
+        font-size: 14px;
+    }
+}
+
+%texto-iconos-good-gris, .texto-iconos-good-gris {
+    font-family: f(comic);
+    font-size: 22px;
+    font-weight: 500;
+    color: c(gray);
+    @include under(contactForm){
+        font-size: 18px;
+    }
+    @include under(bag){
+        font-size: 16px;
+    }
+    @include under(xs){
+        font-size: 12px;
+    }
+}
+
+/* P r e s s   r e l e a s e */
+%paragraph-release-pie-foto, .paragraph-release-pie-foto {
+    font-family: f(sans);
+    font-size: 16px;
+    color: c(gray-light);
+    font-weight: 500;
+    @include under(sm){
+        font-size: 14px;
+    }
+}
+
+%paragraph-release-texto, .paragraph-release-texto {
+    font-family: f(sans);
+    font-size: 24px;
+    color: c(gray);
+    font-weight: 500;
+    @include under(md){
+        font-size: 20px;
+    }
+    @include under(sm){
+        font-size: 18px;
+    }
+    @include under(sm-mobile){
+        font-size: 14px;
+    }
+}
+
+%paragraph-release-estracto, .paragraph-release-estracto {
+    font-family: f(sans);
+    font-size: 30px;
+    color: c(gray);
+    font-weight: 500;
+    @include under(md){
+        font-size: 26px;
+    }
+    @include under(sm){
+        font-size: 20px;
+    }
+    @include under(sm-mobile){
+        font-size: 16px;
+    }
+}

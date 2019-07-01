@@ -1,0 +1,88 @@
+%input {
+    border: transparent;
+    
+    margin-bottom: s(3/2);
+    
+    padding-left: s();
+    padding-bottom: 0;
+    padding: 5px 16px;
+    
+    font-family: f(comic);
+    font-size: 14px;
+    font-weight: bold;
+    color: c();
+
+    -webkit-appearance: none;
+    -moz-appereance: none;
+    appereance: none;
+    
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+
+    outline: none;
+
+    border-radius: 20px;
+    text-align: center;
+
+    &:focus {
+      
+      &::-webkit-input-placeholder {
+        color: transparent;
+      }
+
+      &:-moz-placeholder {
+        color: transparent;
+      }
+
+      &::-moz-placeholder {
+        color: transparent;
+      }
+
+      &:-ms-input-placeholder {
+        color: transparent;
+      }
+    }
+
+    &::-webkit-input-placeholder {
+      font-family: f(comic);
+      font-size: 14px;
+      color: c();
+      font-weight: bold;
+
+      @include under(sm) {
+        font-size: 14px;
+      }
+    }
+
+  	&:-moz-placeholder {
+      font-family: f(comic);
+      font-size: 14px;
+      color: black;
+      font-weight: bold;
+    }
+
+  	&::-moz-placeholder {
+      font-family: f(comic);
+      font-size: 14px;
+      color: black;
+      font-weight: bold;
+    }
+
+  	&:-ms-input-placeholder {
+      font-family: f(comic);
+      font-size: 14px;
+      color: black;
+      font-weight: bold;
+    }
+}
+
+%input-footer {
+    // @extend %input-type;
+    @include input-styling(c(base), c(light), 0, none, transparent, 0, 7px, 7px, 368px);
+    height: 23px;
+    font-family: f(sans);
+    font-size: 14px;
+  	font-weight: 200;
+  	text-align: center;
+}

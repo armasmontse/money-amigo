@@ -1,0 +1,96 @@
+.press {
+
+	/* I c o n o s */
+	.iconos {
+
+		&__contenedor {
+			width: 80vw;
+			margin: 0 auto;
+			@include under(sm) {
+		        width: 93vw;
+		    }
+		}
+
+		&__titulo {
+
+			&--morado {
+				@extend %titulo-press-seccion-iconos;
+				margin-bottom: 90px;
+				@include under(lg){
+			        margin-bottom: 70px;
+			    }
+			    @include under(bag){
+			        margin-bottom: 45px;
+			    }
+			    @include under(sm){
+			        margin-bottom: 30px;
+			    }
+			}
+		}
+
+		&__lista{
+			
+			&--flex{
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			&--item {
+				width: calc(100% / 3);
+				text-align: center;
+				margin-bottom: 100px;
+				padding: 0 10px;
+				@include under(lg){
+			        margin-bottom: 80px;
+			    }
+			    @include under(bag){
+			        margin-bottom: 60px;
+			    }
+			    @include under(sm){
+			        margin-bottom: 40px;
+			    }
+
+				&--img {
+					width: auto;
+					margin: 0 auto;
+					@include under(sm-mobile) {
+				        width: 70%;
+				    }
+				    @include under(md) {
+				        width: 70%;
+				    }
+
+					&.grande {
+						width: 70%;
+						@include under(contactForm) {
+					        width: 90%;
+					    }
+					}
+
+				}
+
+				&--ttl {
+
+					@extend %paragraph-press-iconos-grande;
+					margin-top: 30px;
+					@include under(sm-mobile) {
+						margin-top: 17px;
+				    }
+
+				    &.rosa {
+				    	color: c(pink) !important;
+				    }
+				}
+
+				p {
+					@extend %paragraph-press-iconos;
+					color: c(gray);
+
+					.light {
+						font-weight: 400;
+					}
+				}
+			}
+		}
+	}
+}

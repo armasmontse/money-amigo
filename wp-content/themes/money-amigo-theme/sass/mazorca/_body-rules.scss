@@ -1,0 +1,91 @@
+body {
+
+	&.not-home {
+
+		padding-top: 45px;
+
+		@include under(sm) {
+			padding-top: 70px;
+		}
+		
+		.action {
+			display: block;
+		}
+
+		.gradient-scroll-change {
+			background-size: 100vw 100vh;
+		}
+
+		.gradient-scroll-change-horizontal {
+			background-size: 100vw 100vh;
+		}
+
+		@each $color, $hex in $backgrounds {
+
+			&.#{ $color } {
+	
+				.gradient-scroll-change {
+					@include gradient($color, 180deg);
+				}
+	
+				.gradient-scroll-change-horizontal {
+					@include gradient($color, 90deg);
+				}
+
+				.simple-page {
+
+					&__section--title {
+						@include gradient($color, 90deg);
+					}
+
+					&__navigation {
+						color: background($color);
+					}
+
+					&__subsection {
+
+						&-title {
+							color: background($color);
+							@include gradient($color, 90deg);
+						}
+
+						&-content {
+							h1, h2, h3, h4, h5, h6 {
+								color: nextBackground($color);
+							}
+						}
+					}
+				}
+
+				// Colores about
+
+				.about__gradiente {
+					@include gradient($color, 90deg);
+				}
+
+				.signup__frase {
+					span {
+						color: nextBackground($color);
+					}
+				}
+
+				.signup__customer {
+					span {
+						color: nextBackground($color);
+					}
+				}
+
+				// Colores press
+				.press .our-stories__circulo {
+					@include gradient($color, 90deg);
+				}
+
+				.innovator__download.morado {
+					@include gradient($color, 90deg);
+				}
+
+			}
+	
+		}
+	}
+}

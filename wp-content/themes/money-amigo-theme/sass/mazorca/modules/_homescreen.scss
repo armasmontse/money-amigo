@@ -1,0 +1,27 @@
+.homescreen {
+
+	background-color: white;
+	width: 100%;
+	position: relative;
+
+	&__image {
+		width: 100%;
+		height: auto;
+		display: block;
+
+		&.hidden-xs {
+			@include under(sm)
+			{
+				display: none;
+			}
+		}
+
+		&.hidden-xl {
+			@include over(sm)
+			{
+				display: none;
+			}
+		}
+	}
+
+}

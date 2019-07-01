@@ -1,0 +1,36 @@
+.cards {
+
+	&__wrapper {
+		display: flex;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+
+		@include under(sm) {
+			position: static;
+		}
+	}
+
+	&__col {
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		flex-direction: column;
+
+		width: 100%;
+	}
+
+	&__image {
+		max-width: 445px;
+		width: 100%;
+		height: auto;
+		margin-top: 72px;
+		margin-right: 45px;
+		display: inline-block;
+
+		@include under(sm){
+			margin: 0 auto;
+		}
+	}
+}

@@ -1,0 +1,80 @@
+//_________________________ Config:Fuentes _________________________ \\
+
+/**
+ * Declare fonts using the Mixin
+ */
+
+
+// 400 is the same as normal, and 700 is the same as bold
+
+// Gotham Rounded --------
+@font-face {
+    font-family: 'Gotham Rounded';
+    src: url('../fonts/GothamRounded-Smiley/GothamRounded-LightSmiley.eot');
+    src: url('../fonts/GothamRounded-Smiley/GothamRounded-LightSmiley.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GothamRounded-Smiley/GothamRounded-LightSmiley.woff') format('woff'),
+         url('../fonts/GothamRounded-Smiley/GothamRounded-LightSmiley.svg#GothamRounded-LightSmiley') format('svg');
+    font-weight: 300;
+    font-style: normal;
+} // 300 normal
+@include declara-font-face(Gotham Rounded, '../fonts/GothamRounded/GothamRounded-LightItalic', 300, italic); // 300 italic
+
+@font-face {
+    font-family: 'Gotham Rounded';
+    src: url('../fonts/GothamRounded-Smiley/GothamRounded-BookSmiley.eot');
+    src: url('../fonts/GothamRounded-Smiley/GothamRounded-BookSmiley.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GothamRounded-Smiley/GothamRounded-BookSmiley.woff') format('woff'),
+         url('../fonts/GothamRounded-Smiley/GothamRounded-BookSmiley.svg#GothamRounded-BookSmiley') format('svg');
+    font-weight: 400;
+    font-style: normal;
+} // 400 normal
+@include declara-font-face(Gotham Rounded, '../fonts/GothamRounded/GothamRounded-BookItalic', 400, italic); // 400 italic
+
+@font-face {
+    font-family: 'Gotham Rounded';
+    src: url('../fonts/GothamRounded-Smiley/GothamRounded-MediumSmiley.eot');
+    src: url('../fonts/GothamRounded-Smiley/GothamRounded-MediumSmiley.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GothamRounded-Smiley/GothamRounded-MediumSmiley.woff') format('woff'),
+         url('../fonts/GothamRounded-Smiley/GothamRounded-MediumSmiley.svg#GothamRounded-MediumSmiley') format('svg');
+    font-weight: 500;
+    font-style: normal;
+} // 500 normal
+@include declara-font-face(Gotham Rounded, '../fonts/GothamRounded/GothamRounded-MediumItalic', 500, italic); // 500 italic
+
+@font-face {
+    font-family: 'Gotham Rounded';
+    src: url('../fonts/GothamRounded-Smiley/GothamRounded-Smiley.eot');
+    src: url('../fonts/GothamRounded-Smiley/GothamRounded-Smiley.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GothamRounded-Smiley/GothamRounded-Smiley.woff') format('woff'),
+         url('../fonts/GothamRounded-Smiley/GothamRounded-Smiley.svg#GothamRounded-Smiley') format('svg');
+    font-weight: 700;
+    font-style: normal;
+} // 700 normal
+
+// @include declara-font-face(Gotham Rounded, '../fonts/GothamRounded/GothamRounded-Bold', 700, normal); // 700, normal
+@include declara-font-face(Gotham Rounded, '../fonts/GothamRounded/GothamRounded-BoldItalic', 700, italic); // 700 italic
+
+// Avenir LS Std --------
+@include declara-font-face(Avenir LT Std, '../fonts/AvenirLTStd/AvenirLTStd-Roman', normal, normal);
+@include declara-font-face(Avenir LT Std, '../fonts/AvenirLTStd/AvenirLTStd-Oblique', normal, italic);
+
+@include declara-font-face(Avenir LT Std, '../fonts/AvenirLTStd/AvenirLTStd-Light', 300, normal);
+@include declara-font-face(Avenir LT Std, '../fonts/AvenirLTStd/AvenirLTStd-LightOblique', 300, italic);
+
+@include declara-font-face(Avenir LT Std, '../fonts/AvenirLTStd/AvenirLTStd-Medium', 500, normal);
+@include declara-font-face(Avenir LT Std, '../fonts/AvenirLTStd/AvenirLTStd-MediumOblique', 500, italic);
+
+@include declara-font-face(Avenir LT Std, '../fonts/AvenirLTStd/AvenirLTStd-Black', bold, normal);
+@include declara-font-face(Avenir LT Std, '../fonts/AvenirLTStd/AvenirLTStd-Heavy', bold, normal);
+
+@include declara-font-face(Avenir LT Std, '../fonts/AvenirLTStd/AvenirLTStd-BlackOblique', bold, italic);
+@include declara-font-face(Avenir LT Std, '../fonts/AvenirLTStd/AvenirLTStd-HeavyOblique', bold, italic);
+
+$fonts:(
+	comic: 	'Gotham Rounded',
+	sans: 	'Avenir LT Std',
+);
+
+@function f($font) {
+	@return map-get($fonts, $font);
+}

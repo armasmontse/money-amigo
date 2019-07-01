@@ -1,0 +1,150 @@
+.text {
+
+	&__box {
+		// Font size
+		height: 32px;
+		width: auto !important;
+
+		// Line height
+		// margin-bottom: 50px;
+		// margin-top: 50px;
+
+		// Letter spacing
+		// margin-left: 50px;
+		// margin-right: 50px;
+
+		background-position-x: 0%;
+
+		box-shadow: inset 0px 0px 0 1px white;
+
+		position: relative;
+
+		// border: 2px solid red;
+
+		&.size-16 {
+			height: 16px;
+
+			@include under(sm){
+				height: 12px;
+			}
+		}
+
+		&.size-32 {
+			height: 32px;
+
+			@include under(sm){
+				height: 24px;
+			}
+		}
+
+		&.size-42 {
+			height: 42px;
+		}
+
+		&.size-54 {
+			height: 54px;
+
+			@include under(sm){
+				height: 42px;
+			}
+		}
+
+		&.size-64 {
+			height: 64px;
+
+			@include under(sm){
+				height: 52px;
+			}
+		}
+
+		&.size-80 {
+			height: 80px;
+
+			@include under(sm){
+				height: 78px;
+			}
+		}
+
+		&.size-96 {
+			height: 96px;
+
+			@include under(sm){
+				height: 78px;
+			}
+		}
+
+		&.size-128 {
+			height: 128px;
+
+			@include under(sm){
+				height: 100px;
+			}
+		}
+
+		&.size-156 {
+			height: 156px;
+
+			@include under(sm){
+				height: 132px;
+			}
+		}
+
+		&.size-220 {
+			height: 220px;
+
+			@include under(sm){
+				height: 150px;
+			}
+		}
+
+		&.size-256 {
+			height: 256px;
+		}
+
+		canvas {
+			height: 100%;
+			width: auto;
+			// border: 1px solid red;
+
+			-webkit-box-shadow: inset -1px -1px 0 1px white;
+			-moz-box-shadow: inset -1px -1px 0 1px white;
+			box-shadow: inset -1px -1px 0 1px white;
+		}
+	}
+
+	&__paragraph {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: flex-end;
+		width: 100%;
+
+		& > div{
+			// margin-left: 2.5px;
+			// margin-right: 2.5px;
+
+			// margin-top: 2.5px;
+			// margin-bottom: 2.5px;
+		}
+
+		&.text-center-responsive {
+			@include under(sm) {
+				justify-content: center !important;
+			}
+		}
+
+		&.text-center {
+			justify-content: center;
+		}
+
+		&.text-right-responsive {
+			@include under(sm) {
+				justify-content: flex-end !important;
+			}
+		}
+
+		&.text-right {
+			justify-content: flex-end;
+		}
+	}
+}

@@ -1,0 +1,71 @@
+export const logo = function(ctx){
+
+	// Circulo
+	ctx.beginPath();
+	ctx.moveTo(313.59,0);
+	ctx.bezierCurveTo(165.48,0,45.12,111.83,45.12,249.15);
+	ctx.bezierCurveTo(45.12,386.47,165.48,498.39,313.59,498.39);
+	ctx.bezierCurveTo(461.69999999999993,498.39,582.16,386.56,582.16,249.15);
+	ctx.bezierCurveTo(582.16,111.74000000000001,461.68,0,313.59,0);
+	ctx.moveTo(313.59,424.16);
+	ctx.bezierCurveTo(208.79999999999995,424.16,123.52999999999997,345.6,123.52999999999997,249.16000000000003);
+	ctx.bezierCurveTo(123.52999999999997,151.98000000000002,208.79999999999995,72.95000000000002,313.59,72.95000000000002);
+	ctx.bezierCurveTo(418.38,72.95000000000002,503.46999999999997,151.95000000000002,503.46999999999997,249.16000000000003);
+	ctx.bezierCurveTo(503.46999999999997,345.61,418.30999999999995,424.16,313.59,424.16);
+	ctx.fill();
+	ctx.stroke();
+	
+	// Sonrisa
+	ctx.beginPath();
+	ctx.moveTo(313.7,369.54);
+	ctx.bezierCurveTo(242.82,369.54,182.47,320.70000000000005,173.29999999999998,255.99);
+	ctx.bezierCurveTo(171.64999999999998,243.64000000000001,180.93999999999997,232.35000000000002,194.29999999999998,230.74);
+	ctx.bezierCurveTo(207.66,229.13,219.80999999999997,237.83,221.51,250.16000000000003);
+	ctx.bezierCurveTo(227.51,292.53000000000003,267.05,324.44000000000005,313.71999999999997,324.44000000000005);
+	ctx.bezierCurveTo(359.85999999999996,324.44000000000005,399.52,292.84000000000003,405.80999999999995,250.79000000000005);
+	ctx.bezierCurveTo(407.62999999999994,238.46000000000004,419.96999999999997,229.90000000000003,433.24999999999994,231.62000000000006);
+	ctx.bezierCurveTo(446.5299999999999,233.3400000000001,455.69999999999993,244.71000000000006,453.87999999999994,257.0400000000001);
+	ctx.bezierCurveTo(449.17999999999995,287.99000000000007,432.54999999999995,316.43000000000006,406.97999999999996,337.12000000000006);
+	ctx.bezierCurveTo(381.11999999999995,358.01000000000005,347.97999999999996,369.5400000000001,313.71,369.5400000000001);
+	ctx.fill();
+	ctx.stroke();
+
+}
+
+var $ = jQuery;
+
+export const yourmoney = function(ctx, canvas) {
+
+	var lineHeight = 16,
+		fontSize = 156,
+		initial = fontSize;
+
+	var lines = [
+		'your money',
+	];
+
+	ctx.font = "bold " + fontSize + "px Gotham Rounded";
+	ctx.fillStyle = 'white';
+
+	$.each(lines, function(key, line){
+		ctx.fillText(line, 0, ((fontSize + lineHeight) * key) + initial);
+	});
+}
+
+export const fastfairfriendly = function(ctx, canvas) {
+
+	var lineHeight = 16,
+		fontSize = 56,
+		initial = fontSize;
+
+	var lines = [
+		'fast. fair. friendly.',
+	];
+
+	ctx.font = fontSize + "px Gotham Rounded";
+	ctx.fillStyle = 'white';
+
+	$.each(lines, function(key, line){
+		ctx.fillText(line, 0, ((fontSize + lineHeight) * key) + initial);
+	});
+}

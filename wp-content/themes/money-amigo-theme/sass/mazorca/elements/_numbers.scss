@@ -1,0 +1,80 @@
+sup.number {
+	// background-color: red;
+	position: absolute;
+	color: #aaa;
+	font-size: 11px;
+	top: 0;
+	right: -10px;
+
+	&.number-1 {
+		bottom: 15px;
+		left: 70px;
+
+		@include under(sm) {
+			bottom: 8px;
+			left: 55px;
+		}
+	}
+
+	&.number-2 {
+		top: 10px;
+		right: 10px;
+
+		@include under(sm) {
+			top: 0;
+			right: 0;
+		}
+	}
+
+	&.number-3 {
+		top: 5px;
+		right: -8px;
+
+		@include under(sm) {
+			top: 5px;
+		}
+	}
+
+	&.number-4 {
+		top: 0;
+		right: -10px;
+
+		@include under(sm) {
+			right: -5px;
+		}
+	}
+
+	&.number-5 {
+		top: 0;
+		right: -15px;
+
+		@include under(sm) {
+			right: -8px;
+		}
+	}
+
+	&.number-6 {
+		top: 0;
+		right: -10px;
+	}
+
+	&.number-7 {
+		top: 30px;
+		right: 0px;
+
+		@include under(sm) {
+			top: 10px;
+			right: -8px;
+		}
+	}
+
+	&.number-8 {
+		// top: 30px;
+		// right: 0px;
+
+		// @include under(sm) {
+		// 	top: 10px;
+		// 	right: -8px;
+		// }
+	}
+}

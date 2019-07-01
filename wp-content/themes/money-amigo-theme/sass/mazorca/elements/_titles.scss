@@ -1,0 +1,270 @@
+%title {
+    font-family: f(sans);
+    font-size: 12px;
+    font-weight: normal;
+    color: c();
+    text-transform: uppercase;
+}
+
+%title-description {
+    @extend %title;
+    font-family: f(inputs);
+    font-style: italic;
+}
+
+%title-img {
+  @extend %title;
+  color: c(beige);
+}
+
+%title-bill {
+    @extend %title;
+    font-size: 13px;
+    color: c(brown);
+}
+
+%title-pages, .title-pages {
+    font-family: f(comic);
+    font-size: 150px;
+    text-transform: lowercase;
+    color: c(white);
+    font-weight: 500;
+    @include under(sm) {
+        font-size: 90px;
+    }
+    @include under(invitation) {
+        font-size: 65px;
+    }
+    @include under(xs) {
+        font-size: 50px;
+    }
+}
+
+/* A b o u t */
+%frase-about, .frase-about {
+    font-family: f(comic);
+    font-size: 55px;
+    line-height: 70px;
+    font-weight: 500;
+    @include under(sm-mobile){
+        font-size: 35px;
+        line-height: 50px;
+    }
+    @include under(invitation){
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+/* P r e s s */
+%title-press, .title-press {
+    font-family: f(comic);
+    font-size: 250px;
+    color: c(white);
+    font-weight: bold;
+    @include under(md){
+        font-size: 150px;
+    }
+    @include under(bag){
+        font-size: 75px;
+    }
+    @include under(invitation){
+        font-size: 50px;
+    }
+}
+
+%titulo-press-seccion-iconos, .titulo-press-seccion-iconos {
+    font-family: f(comic);
+    font-weight: normal;
+    font-size: 71px;
+    color: c(purple);
+    @include under(lg){
+        font-size: 60px;
+    }
+    @include under(bag){
+        font-size: 48px;
+    }
+    @include under(sm){
+        font-size: 35px;
+    }
+}
+
+%titulo-press-seccion-our-stories, .titulo-press-seccion-our-stories {
+    font-family: f(comic);
+    font-weight: bold;
+    font-size: 85px;
+    line-height: 90px;
+    color: c(purple);
+    @include under(lg){
+        font-size: 70px;
+        line-height: 80px;
+    }
+    @include under(bag){
+        ffont-size: 55px;
+        line-height: 65px;
+    }
+    @include under(sm){
+        font-size: 45px;
+        line-height: 52px;  
+    }
+}
+
+%titulo-press-seccion-media, .titulo-press-seccion-media {
+    @extend %titulo-press-seccion-our-stories;
+    font-size: 130px;
+    @include under(lg){
+        font-size: 90px;
+    }
+    @include under(bag){
+        font-size: 70px;
+    }
+    @include under(sm){
+        font-size: 50px;
+    }
+
+}
+
+%subtitulo-press, subtitulo-press {
+    font-size: 50px;
+    line-height: 53px;
+    font-weight: bold;
+    color: c(pink);
+    font-family: f(comic);
+    @include under(bag){
+        font-size: 38px;
+        line-height: 42px;
+    }
+    @include under(invitation){
+        font-size: 25px;
+        line-height: 25px;
+    }
+}
+
+%subtitulo-press-chico, .subtitulo-press-chico {
+    @extend %subtitulo-press;
+    font-size: 40px;
+    @include under(bag){
+        font-size: 32px;
+        line-height: 42px;
+    }
+    @include under(invitation){
+        font-size: 23px;
+        line-height: 25px;
+    }
+
+}
+
+/* C a r */
+%titulo-car-funfacts, .titulo-car-funfacts {
+    color: c(green);
+    font-size: 76px;
+    font-family: f(comic);
+    font-weight: bold;
+    text-align: right;
+    @include under(contactForm){
+        font-size: 65px;
+    }
+    @include under(md){
+        font-size: 45px;
+    }
+}
+
+/* P a r t n e r */
+%titulo-partner, .titulo-partner {
+    font-family: f(comic);
+    font-size: 105px;
+    color: c(white);
+    font-weight: bold;
+    @include under(md){
+        font-size: 75px;
+    }
+    @include under(sm){
+        font-size: 45px;
+    }
+    @include under(sm-mobile){
+        font-size: 30px;
+    }
+}
+
+%titulo-partner-morado, .titulo-partner-morado {
+    font-family: f(comic);
+    font-size: 50px;
+    color: c(purple);
+    font-weight: 500;
+    @include under(md){
+        font-size: 40px;
+    }
+    @include under(sm){
+        font-size: 28px;
+    }
+    @include under(sm-mobile){
+        font-size: 24px;
+    }
+}
+
+%titulo-partner-formulario, .titulo-partner-formulario {
+    @extend %titulo-partner;
+    color: c(pink);
+    font-weight: 500;
+}
+
+
+/* P r e s s   r e l e a s e */
+%titulo-pagina-release {
+    @extend %titulo-partner-morado;
+    font-size: 66px;
+    @include under(md){
+        font-size: 54px;
+    }
+    @include under(sm){
+        font-size: 42px;
+    }
+    @include under(sm-mobile){
+        font-size: 32px;
+    }
+}
+
+%releases-categoria-nota, .releases-categoria-nota {
+    font-family: f(comic);
+    font-size: 33px;
+    font-weight: 500;
+    color: c(green);
+    @include under(md){
+        font-size: 28px;
+    }
+    @include under(sm){
+        font-size: 24px;
+    }
+    @include under(sm-mobile){
+        font-size: 20px;
+    }
+}
+
+%releases-fecha-nota, .releases-fecha-nota {
+    font-family: f(comic);
+    font-size: 28px;
+    font-weight: 400;
+    color: c(gray-light);
+    @include under(md){
+        font-size: 24px;
+    }
+    @include under(sm){
+        font-size: 20px;
+    }
+    @include under(sm-mobile){
+        font-size: 17px;
+    }
+}
+
+%releases-titulo-nota, .releases-titulo-nota {
+    @extend %titulo-car-funfacts;
+    font-weight: 500;
+    @include under(md){
+        font-size: 40px;
+    }
+    @include under(sm){
+        font-size: 32px;
+    }
+}
+
+    

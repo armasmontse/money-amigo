@@ -1,0 +1,49 @@
+.player {
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 0;
+		background-color: rgba(0,0,0,0.5);
+		background-color: black;
+		height: 0;
+		transition: opacity 0.3s ease 0.5s;
+		iframe {
+			height: 0;
+		}
+		&.open {
+			min-height: 100vh;
+			height: 100vh;
+			opacity: 1;
+
+			iframe {
+				height: 100%;
+				width: 100%;
+			}
+
+			.player__close {
+				display: block;
+			}
+		}
+		&.open+.icon {display: none;}
+	}
+	&__close {
+		display: none;
+		position: absolute;
+		z-index: 9999;
+		top: 10px;
+		left: 10px;
+		color: white;
+		font-size: 24px;
+		background-color: rgba(0, 0, 0, 0.4);
+		padding: 8px 12px 6px 12px;
+		border-radius: 5px;
+		font-weight: bold;
+		font-family: f(sans);
+
+		&:hover {
+			background-color: white;
+			color: rgba(0, 0, 0, 0.4);
+		}
+	}
+}

@@ -1,0 +1,156 @@
+.mobilesecure {
+	padding-top: 4vh;
+	padding-bottom: 4vh;
+	
+	&__container {
+
+		@include under(sm) {
+			padding-top: 5vh;
+			padding-bottom: 5vh;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-flow: row wrap;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+
+		@include under(md) {
+			flex-direction: column;
+		}
+	}
+
+	&__col {
+		display: flex;
+		width: 30%;
+		overflow: hidden;
+
+		@include under(md) {
+			width: 100%;
+		}
+		
+		&--content {
+			width: 70%;
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: center;
+
+			@include under(md) {
+				width: 100%;
+				align-items: center;
+			}
+		}
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include under(md) {
+			flex-direction: column;
+		}
+	}
+
+	&__bottom {
+		margin: 20px 0;
+	}
+
+	&__box {
+		&--mobile {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__down {
+		margin-top: 22px;
+		@include under(md) {
+			text-align: center;
+			margin-top: 10px;
+		}
+	}
+
+	&__text {
+		font-family: f(comic);
+		color: background('blue');
+
+		&--money {
+			text-align: right;
+			position: relative;
+			font-weight: 500;
+			font-size: 21px;
+			
+			@include under(xs) {
+				text-align: center;
+				font-size: 18px;
+			}
+		}
+
+		&--hundred {
+			font-size: 160px;
+			font-weight: 700;
+
+			@include under(between-lg-md) {
+				font-size: 140px;
+			}
+
+			@include under(md) {
+				font-size: 160px;
+			}
+
+			@include under(sm) {
+				font-size: 140px;
+			}
+
+			@include under(xs) {
+				font-size: 95px;
+			}
+		}
+
+		&--mobile {
+			font-size: 80px;
+			font-weight: 700;
+
+			@include under(between-lg-md) {
+				font-size: 60px;
+			}
+
+			@include under(md) {
+				font-size: 80px;
+			}
+
+			@include under(xs) {
+				font-size: 60px;
+			}
+		}
+
+		&--and {
+			font-size: 60px;
+			font-weight: 700;
+
+			@include under(xs) {
+				font-size: 40px;
+			}
+		}
+
+		&--acces {
+			font-size: 36px;
+			font-weight: 700;
+
+			@include under(xs) {
+				font-size: 24px;
+			}
+		}
+	}
+
+	&__video {
+		width: 100% !important;
+		height: auto;
+		margin: 25px 0;
+	}
+
+	
+}

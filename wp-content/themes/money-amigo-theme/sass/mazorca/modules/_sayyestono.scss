@@ -1,0 +1,65 @@
+.sayyestono {
+	height: auto;
+	padding: 20vh 0;
+	display: flex;
+
+	&__text {
+		color: background('blue');
+		font-family: f(comic);
+		font-weight: 700;
+		font-size: 62px;
+		padding: 20px;
+
+		@include under(xs) {
+			padding: 0;
+			font-size: 38px;
+			text-align: center;
+		}
+	}
+
+	&__no {
+		margin-bottom: 20px;
+		display: flex;
+		font-weight: 400;
+		justify-content: center;
+
+		@include under(xs) {
+			flex-direction: column;
+		}
+
+		div {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			&.no {
+				font-weight: 500;
+				font-size: 320px;
+				font-family: f(comic);
+				color: background('blue');
+
+				@include under(xs) {
+					font-size: 180px;
+				}
+			}
+
+			&.items {
+				ul {
+					li {
+						font-size: 36px;
+
+						@include under(xs) {
+							font-size: 26px;
+						}
+						
+						span {
+							color: background('blue');
+						}
+					}
+				}
+			}
+		}
+	}
+
+}

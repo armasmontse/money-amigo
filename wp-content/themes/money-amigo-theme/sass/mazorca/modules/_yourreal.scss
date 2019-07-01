@@ -1,0 +1,95 @@
+.yourreal {
+
+	&__container {
+		align-items: center;
+		height: $full-height;
+
+		@include under(sm){
+			height: $responsive-full-height;
+			transition: height 9999s;
+		}
+	}
+
+	&__wrapper {
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+	}
+
+	&__col {
+		width: 50%;
+
+		@include under(sm) {
+			width: 100%;
+		}
+
+		&--vr {
+			height: auto;
+			overflow: hidden;
+
+			img {
+				transform: scale(1.6);
+				height: auto;
+			}
+		}
+	}
+
+	&__text {
+		text-align: right;
+		font-family: f(comic);
+		color: background('purple-end');
+
+		@include under(sm) {
+			text-align: center;
+		}
+
+		&--real {
+			text-align: left;
+			font-size: 80px;
+			font-weight: 700;
+
+			@include under(md) {
+				font-size: 64px;
+			}
+
+			@include under(sm) {
+				text-align: center;
+			}
+
+			@include under(xs) {
+				font-size: 48px;
+			}
+		}
+
+		&--metal {
+			text-align: left;
+			font-size: 105px;
+			font-weight: 700;
+
+			@include under(md) {
+				font-size: 84px;
+			}
+
+			@include under(sm) {
+				text-align: center;
+			}
+
+			@include under(xs) {
+				font-size: 64px;
+			}
+		}
+
+		&--replace {
+			font-size: 25px;
+
+			@include under(sm) {
+				font-size: 21px;
+			}
+
+			@include under(xs) {
+				font-size: 16px;
+			}
+		}
+	}
+}

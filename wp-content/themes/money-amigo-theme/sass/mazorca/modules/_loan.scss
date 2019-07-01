@@ -1,0 +1,98 @@
+.loan {
+	padding: 20vh 0;
+
+	&__content {
+		color: background('orange');
+		font-family: f(comic);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__text {
+		text-align: center;
+		font-size: 24px;
+		font-weight: 500;
+		position: relative;
+		display: inline-block;
+
+		@include under(sm) {
+			font-size: 18px;
+		}
+
+		&--big {
+			font-size: 160px;
+			font-weight: 700;
+
+			@include under(sm) {
+				font-size: 120px;
+			}
+
+			.nottobig {
+				font-size: 160px;
+				font-weight: 700;
+
+				@include under(sm) {
+					font-size: 120px;
+				}
+			}
+		}
+
+		&--apr {
+			font-size: 120px;
+			font-weight: 700;
+
+			@include under(sm) {
+				font-size: 64px;
+			}
+		}
+
+		strong {
+			font-weight: 700;
+		}
+	}
+
+	&__no {
+		margin-bottom: 20px;
+		display: flex;
+		font-weight: 400;
+		justify-content: center;
+
+		div {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			&.no {
+				font-weight: 500;
+				font-size: 250px;
+				font-family: f(comic);
+				color: background('orange');
+
+				@include under(sm) {
+					font-size: 140px;
+				}
+			}
+
+			&.items {
+				ul {
+					li {
+						font-family: f(sans);
+						font-size: 36px;
+
+						@include under(sm) {
+							font-size: 24px;
+						}
+						
+						span {
+							color: background('orange');
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+}

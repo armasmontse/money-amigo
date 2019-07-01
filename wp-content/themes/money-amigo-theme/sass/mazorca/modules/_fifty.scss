@@ -1,0 +1,123 @@
+.fifty {
+	padding-top: 7.5vh;
+	padding-bottom: 7.5vh;
+
+	&__container {
+		min-height: 340px;
+
+		@include under(sm) {
+			min-height: 240px;
+		}
+	}
+
+	&__wrapper {
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__logo {
+
+		&-box{
+			// flex: auto;
+			width: 50%;
+			display: inline-block;
+			padding: 20px 10px 0 10px;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+
+			&:last-child{
+				width: 100%;
+			}
+		}
+
+		&-container {
+			width: 100%;
+			max-width: 400px;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			display: flex;
+			justify-content: center;
+			flex-flow: row wrap;
+		}
+	}
+
+	&__powered {
+		text-align: right;
+		font-family: f(comic);
+		font-size: 12px;
+		color: #AAAAAA;
+		margin-bottom: 20px;
+
+		&-image {
+			max-width: 240px;
+			display: inline-block;
+		}
+	}
+
+	&__col {
+		@include under(md) {
+			width: 100%;
+		}
+
+		&--logos {
+			width: 40%;
+			margin: 10px 0;
+
+			@include under(md) {
+				width: 100%;
+			}
+		}
+
+		&--text {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__text{
+		font-family: f(comic);
+		text-align: right;
+		color: background('yellow');
+
+		@include under(md) {
+			text-align: center;
+		}
+		
+		&--360 {
+			font-weight: 700;
+			font-size: 120px;
+
+			@include under(xs) {
+				font-size: 60px;
+			}
+		}
+
+		&--daily {
+			font-weight: 700;
+			font-size: 72px;
+
+			@include under(xs) {
+				font-size: 36px;
+			}
+		}
+
+		&--national {
+			font-weight: 500;
+			font-size: 28px;
+
+			@include under(xs) {
+				font-size: 16px;
+			}
+		}
+
+		&--many {
+			font-size: 18px;
+			text-align: right;
+		}
+	} 
+}

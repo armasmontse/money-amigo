@@ -1,0 +1,50 @@
+.choose {
+
+	&__col {
+		width: 100%;
+		
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		
+		margin-top: 20px;
+		margin-bottom: 20px;
+
+		@include under(sm){
+			flex-flow: column;
+			align-items: center;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__box--choose,
+	&__box {
+		&.orange {
+			@include gradient-orange(162.5deg);
+		}
+	}
+
+	&__box {
+
+		&--choose {
+			background-position-x: 80%;
+			
+			height: 38px;
+
+			@include under(sm){
+				height: 32px;
+			}
+		}
+	}
+
+	&__choose {
+		display: flex;
+		height: 100%;
+		flex-direction: row;
+
+		canvas {
+			height: 100%;
+		}
+	}
+}

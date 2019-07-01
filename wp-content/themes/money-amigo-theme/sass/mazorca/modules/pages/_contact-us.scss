@@ -1,0 +1,158 @@
+.contacto {
+
+	/* S i g n   U p */
+	.signup {
+		width: 95vw;
+		margin: 0 auto;
+
+		&__contenedor {
+			display: flex;
+			align-items: center;
+			margin: 50px 0 70px;
+			align-items: flex-end;
+			@include under(md) {
+				flex-direction: column;
+				align-items: center;
+				margin: 35px 0 30px;
+		    }
+
+			&--60 {
+				width: 55%;
+				@include under(md) {
+					width: 100%;
+					margin: 0 auto;
+				}
+
+				img {
+					width: 95%;
+				}
+			}
+
+			&--40 {
+				width: 45%;
+				@include under(md) {
+					width: 80%;
+					margin-top: 40px;
+			    }
+			}
+
+			.download {
+				display: flex;
+				margin-bottom: 30px;
+				justify-content: space-between;
+
+				img {
+					width: 80%;
+					@include under(invitation) {
+						width: 90%
+					}
+				}
+			}
+		}
+
+		&__frase {
+			@extend %paragraph-contacto-frase;
+			margin-bottom: 5%;
+			
+			span {
+				font-family: f(comic);
+			}
+
+			.verde {
+				@extend %paragraph-contacto-frase-verde;
+			}
+		}
+
+		&__customer {
+			@extend %paragraph-contacto-customer;
+			text-align: center;
+			margin-bottom: 80px;
+			@include under(md) {
+				margin-bottom: 55px;    
+		    }
+		    @include under(sm-mobile) {
+				margin-bottom: 35px; 
+		    }
+
+			.gotham {
+				
+			}
+
+			.verde {
+				color: c(green);
+			}
+
+			.avenir {
+				font-family: f(sans);
+			}
+			
+			&--verde-grande {
+				@extend %paragraph-contacto-telefono;
+				@include under(md) {
+					display: block;
+			    }
+			}
+			.numero-telefonico {
+				font-family: f(sans);				
+			}
+		}
+	}
+
+	/* P a s o s */
+	.pasos {
+		width: 80vw;
+		margin: 0 auto 170px;
+		@include under(md) {
+			margin: 0 auto 130px;
+		}
+		@include under(sm) {
+			margin: 0 auto 80px;
+		}
+		@include under(sm-mobile) {
+			width: 87vw;
+			margin: 0 auto 45px;
+		}
+
+		&__contenedor {
+			display: flex;
+			align-items: center;
+			@include under(md) {
+				flex-direction: column;
+		    }
+		}
+
+		&__col-1-2 {
+			width: 50%;
+			@include under(md) {
+				width: 85%;
+		    }
+		}
+
+		&__box {
+
+		}
+
+		&__item {
+			@extend %paragraph-contacto-pasos;
+			margin-bottom: 20px;
+
+			&--verde {
+				@extend %paragraph-contacto-pasos;
+				color: c(green);
+				font-weight: 500;
+
+				&.titulo {
+					@extend %paragraph-contacto-pasos-titulo;
+				}
+			}
+
+			.gotham {
+				font-family: f(comic);
+			}
+
+			.bold {
+				font-family: f(comic);
+			}
+		}
+	}
+}

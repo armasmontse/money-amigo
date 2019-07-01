@@ -1,0 +1,327 @@
+.doctor {
+	padding: 10vh 0;
+
+	&__container {
+		@extend .grid__container;
+		padding: 0;
+
+		@include under(md){
+			padding: 0 20px;
+		}
+	}
+
+	&__row {
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-gap: 25px;
+
+		@include under(md) {
+			grid-template-columns: 100%;
+		}
+
+		& > div {
+			width: 100%;
+		}
+	} 
+
+	&__benefits {
+		font-size: 32px;
+		font-family: f(comic);
+		font-weight: 400;
+		text-align: left;
+		margin-bottom: 80px;
+
+		@include under(md) {
+			text-align: center;
+			margin-bottom: 40px;
+		}
+
+		img {
+			height: 32px;
+			width: auto;
+			display: inline-block;
+			vertical-align: bottom;
+			position: relative;
+			top: 3px;
+	
+			@include under(md) {
+				height: 32px;
+			}
+		}
+	}
+
+	&__icon {
+
+		&-box {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			margin-bottom: 20px;
+
+			@include under(md) {
+				justify-content: center;
+			}
+		}
+
+		&--big {
+			width: 300px;
+			height: 300px;
+			min-width: 300px;
+			min-height: 300px;
+			background-color: background('purple');
+			color: white;
+			font-size: 124px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+
+			@include under(md) {
+				width: 150px;
+				height: 150px;
+				font-size: 62px;
+			}
+
+			svg {
+				width: 100%;
+				height: 100%;
+				fill: white;
+			}
+		}
+	}
+
+	&__text {
+		color: background('purple');
+		font-family: f(comic);
+		font-weight: 500;
+
+		@include under(md) {
+			text-align: center;
+		}
+
+		strong {
+			font-size: 1.3em;
+			font-weight: 700;
+		}
+
+		&--doctor {
+			font-size: 72px;
+
+			@include under(md) {
+				font-size: 32px;
+			}
+		}
+
+		&--24 {
+			text-align: right;
+			font-weight: 700;
+			font-size: 240px;
+
+			@include under(md) {
+				text-align: center;
+				font-size: 180px;
+			}
+
+			@include under(xs) {
+				font-size: 100px;
+			}
+		}
+
+		&--anytime {
+			text-align: right;
+			font-size: 58px;
+
+			@include under(md) {
+				text-align: center;
+			}
+
+			@include under(xs) {
+				font-size: 32px;
+			}
+		}
+
+		&--extra {
+			text-align: right;
+			font-size: 16px;
+
+			@include under(md) {
+				text-align: center;
+			}
+
+		}
+
+		&--bottom {
+			white-space: nowrap;
+			text-align: right;
+			font-size: 18px;
+			margin-left: auto !important;
+
+			@include under(md) {
+				text-align: center;
+				white-space: normal;
+			}
+		}
+	}
+
+	&__icons {
+		margin: 10px 0;
+
+		ul {
+			display: flex;
+			justify-content: flex-end;
+			flex-flow: row wrap;
+
+			@include under(md) {
+				justify-content: center;
+			}
+
+			li {
+				// background-color: background('purple');
+				border-radius: 50%;
+				width: 100px;
+				height: 100px;
+				min-width: 100px;
+				min-height: 100px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				margin: 10px 0 10px 20px;
+				font-size: 32px;
+
+				@include under(md) {
+					width: 65px;
+					height: 65px;
+					min-width: 65px;
+					min-height: 65px;
+					margin: 5px 0 5px 10px;
+				}
+
+				@include under(invitation) {
+					width: 100px;
+					height: 100px;
+					min-width: 100px;
+					min-height: 100px;
+					margin: 5px 0 5px 10px;
+				}
+
+				svg {
+					width: 100%;
+					height: 100%;
+					fill: white;
+
+					.st0 {
+						stroke: transparent;
+					}
+				}
+			}
+		}
+	}
+
+	&__flex {
+
+		&--center {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			justify-content: space-around;
+			align-items: center;
+		}
+	}
+
+	.conveniently {
+		width: 100%;
+
+		ul {
+			display: flex;
+			@include under(md) {
+				flex-wrap: wrap;
+				justify-content: space-evenly;
+				margin: 40px 0px;
+			}
+			
+			li{
+				padding: 0 10px;
+				text-align: center;
+				width: 20%;
+				@include under(md) {
+					width: 28%;
+				}
+				@include under(invitation) {
+					width: 33%;
+				}
+
+				img {
+					margin-bottom: 10px;
+				}
+
+				.item {
+					width: 100%;
+					height: 160px;
+					margin-bottom: 10px;
+					@include under(invitation) {
+						height: 120px;
+					}
+
+					&.bg {
+						background-size: contain;
+						background-repeat: no-repeat;
+						background-position: center;
+					}
+				
+					&.one {
+						background-image: url('../images/conveniently/1_sick.png');
+						
+						&:hover {
+							background-image: url('../images/conveniently/1_healthy.png');
+						}
+					}
+					&.two {
+						background-image: url('../images/conveniently/2_sick.png');
+						
+						&:hover {
+							background-image: url('../images/conveniently/2_healthy.png');
+						}
+					}
+					&.three {
+						background-image: url('../images/conveniently/3_sick.png');
+						
+						&:hover {
+							background-image: url('../images/conveniently/3_healthy.png');
+						}
+					}
+					&.four {
+						background-image: url('../images/conveniently/4_sick.png');
+						
+						&:hover {
+							background-image: url('../images/conveniently/4_healthy.png');
+						}
+					}
+					&.five {
+						background-image: url('../images/conveniently/5_sick.png');
+						
+						&:hover {
+							background-image: url('../images/conveniently/5_healthy.png');
+						}
+					}
+				}
+
+				strong {
+					font-weight: bold;
+					color: c(gray-light);
+					font-size: 18px;
+				}
+			}
+		}
+
+		&__bottom {
+			text-align: center;
+			display: flex;
+		}
+
+		&__frase {
+			font-family: f(comic);
+			font-size: 26px;
+		}
+	}
+}

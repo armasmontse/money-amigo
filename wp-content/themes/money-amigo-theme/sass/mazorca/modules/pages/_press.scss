@@ -1,0 +1,116 @@
+@import 'press/_true-friendship.scss';
+@import 'press/_iconos.scss';
+@import 'press/_our-stories.scss';
+@import 'press/_media-kit.scss';
+@import 'press/_innovator.scss';
+
+
+
+.press {
+
+	/* S l i d e r */
+	.slider {
+		background-image: url(../images/press/press-bg-personas.jpg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 50%;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		@include under(bag){
+	        background-size: 100%;
+	    }
+
+		&__ttl {
+			@extend %title-press;
+			/*margin-top: 25%;*/
+			margin-top: 40rem;
+			@include under(bag){
+		        margin-top: 25rem;
+		    }
+		    @include under(sm){
+		        margin-top: 15rem;
+		    }
+		    @include under(invitation){
+		        margin-top: 15rem;
+		    }
+		    @include under(xs){
+		        margin-top: 12rem;
+		    }
+		}
+	}
+
+	/* M a s o n r y */
+	.masonry {
+		&__row {
+			display: flex;
+		}
+
+		&__box-img {
+
+		}
+
+		&__img {
+			width: 100%;
+			height: 100%;
+		}
+
+		&__box-links {
+			@extend %link-press-descarga;
+			color: c(white);
+			position: absolute;
+			margin: 15px;
+			display: flex;
+
+			a {
+				padding: 0 8px;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	/* T e a m */
+	.team {
+		&__titulo {
+			@extend %titulo-press-seccion-our-stories;
+			color: c(pink);
+			margin-bottom: 60px;
+			@include under(bag){
+				margin-bottom: 30px;
+		    } 
+		}
+
+		&__texto {
+			@extend %paragraph-press-texto;
+			margin-bottom: 60px;
+			@include under(bag){
+				margin-bottom: 30px;
+		    }
+		}
+
+		&__subtitulo {
+			@extend %titulo-press-seccion-our-stories;
+			color: c(purple);
+			margin-bottom: 60px;
+			@include under(bag){
+				margin-bottom: 30px;
+		    }
+		}
+
+		&__informacion {
+			@extend %subtitulo-press-chico;
+			color: c(gray-light);
+
+		}
+
+		&__mail {
+			@extend %subtitulo-press-chico;
+			color: c(purple);	
+		}
+	}
+
+	.body.not-home.purple .gradient-scroll-change {
+		background-color: red !important;
+	}
+}

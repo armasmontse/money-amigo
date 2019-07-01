@@ -1,0 +1,72 @@
+.simple-page {
+
+	&__section {
+		margin: 20px 0;
+		
+		&--title {
+			margin-bottom: 20px;
+			min-height: 20vh;
+			background: whitesmoke;
+		}
+	}
+
+	&__title-box {
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		padding: 40px 0;
+	}
+
+	&__title {
+		color: white;
+		font-family: f(comic);
+		font-size: 150px;
+		font-weight: bold;
+		text-transform: lowercase;
+
+		@include under(sm) {
+			font-size: 36px;
+		}
+	}
+
+	&__content {
+		@extend %content;
+	}
+
+	&__navigation {
+		width: 100%;
+		display: flex;
+		color: #5B5B5B;
+		flex-flow: row wrap;
+
+		li a{
+			display: inline-block;
+			padding: 20px;
+			font-family: f(comic);
+			font-size: 16px;
+			font-weight: bold;
+			text-transform: lowercase;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__subsection {
+		margin: 20px 0;
+
+		&-title {
+			font-size: 72px;
+			font-family: f(comic);
+			font-weight: bold;
+			text-align: center;
+			line-height: 1.5;
+			text-transform: lowercase;
+		}
+
+		&-content {
+			@extend %content;
+		}
+	}
+}

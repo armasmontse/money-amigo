@@ -1,0 +1,55 @@
+.twocardstwooptions {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 20vh 0;
+
+	&__col {
+		width: 100%;
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		
+		margin-top: 40px;
+		margin-bottom: 10px;
+
+		@include under(sm){
+			flex-direction: column;
+		}
+	}
+
+	&__text {
+		color: background('blue');
+		font-family: f(comic);
+		font-weight: 700;
+		font-size: 62px;
+		padding: 0 20px 20px 20px;
+		width: 100%;
+		text-align: center;
+
+		@include under(xs) {
+			padding: 0 10px 10px 10px;
+			font-size: 38px;
+		}
+
+		&--choose {
+			font-weight: 400;
+			font-size: 21px;
+		}
+	}
+
+	&__phonecards {
+		width: 100% !important;
+		height: auto !important;
+		margin-top: 0;
+	}
+
+	&__image-placeholder {
+		width: 100%;
+		height: auto;
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
+}

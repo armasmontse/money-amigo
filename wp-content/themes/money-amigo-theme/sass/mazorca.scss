@@ -1,0 +1,32 @@
+@charset "UTF-8";
+//===Mazorca Core===//
+@import "node_modules/mazorca-core/_mazorca-core.scss";
+
+$menu-height: 45px;
+$reponsive-menu-height: 80px;
+
+$full-height: calc(100vh - #{$menu-height});
+$responsive-full-height: calc(100vh - #{$reponsive-menu-height});
+
+//===Configs===//
+@import "mazorca/config/_config";
+
+//===Vendor===//Css begins compling here
+	// @import "vendor/bootstrap/_bootstrap.scss";
+
+//===Mazorca===//
+@import "mazorca/_elements";
+@import "mazorca/_grid";//
+@import "mazorca/_components";
+@import "mazorca/_gradients";
+@import "mazorca/_theme-helpers";
+@import "mazorca/_modules";
+@import "mazorca/_body-rules";
+
+// body {
+// 	padding-top: $menu-height;
+
+// 	@include under(sm){
+// 		padding-top: $reponsive-menu-height;
+// 	}
+// }

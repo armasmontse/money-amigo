@@ -1,0 +1,52 @@
+.notfound {
+	
+	&__container {
+		min-height: calc(100vh - 112px);
+
+		@include under(sm) {
+			min-height: calc(100vh - 240px);			
+		}
+	}
+
+	&__wrapper {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		& .text__paragraph {
+			justify-content: center;
+
+			& .text__box {
+				margin: 10px;
+			}
+		}
+	}
+
+	&__text {
+		font-family: f(comic);
+		font-weight: 400;
+		font-size: 112px;
+	}
+
+	&__link {
+		text-transform: uppercase;
+		font-size: 16px;
+		padding: 1em 2em;
+		border-radius: 50px;
+		color: white;
+		position: relative;
+		transition: all 3s ease;
+		background-position-x: 70%;
+		
+		&:hover {
+			top: -5px;
+		}
+
+		&-container {
+			text-align: center;
+			padding: 1em;
+			margin-top: 20px;
+		}
+	}
+}

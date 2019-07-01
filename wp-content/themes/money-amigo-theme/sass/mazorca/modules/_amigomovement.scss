@@ -1,0 +1,118 @@
+.amigo-movement {
+	padding: 20vh 40px;
+
+	@include under(sm) {
+		padding: 20px 20px;
+	}
+	
+	&__container {
+		padding: 60px 0;
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 1604px + 40px;
+		margin: 0 auto;
+
+		@include under(sm) {
+			padding: 20px 0;
+		}
+	}
+	
+	&__col-1-3 {
+		min-height: 300px;
+		margin-bottom: 30px;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		@include over(650px) {
+			@include ternary-column-maker($gutter: 20px);
+			&:nth-child(3n-2) {
+				.amigo-movement__player { background-position: 0%;}
+			}
+			&:nth-child(3n-1) {
+				.amigo-movement__player { background-position: 33%;}
+			}
+			&:nth-child(3n) {
+				.amigo-movement__player { background-position: -100%;}
+			}
+		}
+		@include under(650px) {
+			@include ternary-column-padding($reset: true);
+			width: 100%;
+			min-height: 260px;
+			.amigo-movement__player { background-position: 33%;}
+		}
+		padding: 0 !important;
+	}
+	
+	&__ttl {
+		font-family: f(comic);
+		font-size: 72px;
+		display: inline-block;
+		
+		@include under(650px) {
+			font-size: 50px;
+			text-align: left;
+		}
+
+		@include under(xs) {
+			font-size: 36px;
+			text-align: left;
+		}
+
+		font-weight: bold;
+		color: background('purple-end');
+
+		span {
+			@include under(sm) {
+				display: inline-block;
+				margin-left: 60px;
+			}
+		}
+
+		small {
+			font-size: 16px;
+			display: block;
+			margin-left: 130px;
+			margin-top: 10px;
+
+			@include under(sm) {
+				margin-left: 120px;
+			}
+		}
+	}
+
+	&__copy {
+		font-family: f(comic);
+		font-size: 18px;
+		color: purple;
+		text-align: center;	
+		max-width: 70%;
+    	margin: 10px auto;
+	}
+
+	&__player {
+		@include gradient-purple(90deg);
+		position: relative;
+		height: 260px;
+		width: 260px;
+		@include under(sm) {
+			height: 220px;
+			width: 220px;			
+		}
+		border-radius: 100%;
+		margin: 0 auto;
+		background-size: 200%;
+		transform: scale(0.9);
+		transition: all 0.3s ease;
+		cursor: pointer;
+		&:hover {
+			transform: scale(1);
+		}
+
+		.icon svg{
+			@include center('xy');
+			height: 60px;
+			transform: translate(-33%, -50%);
+		}
+	}
+}

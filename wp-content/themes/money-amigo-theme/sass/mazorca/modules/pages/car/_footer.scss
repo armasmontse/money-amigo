@@ -1,0 +1,83 @@
+.footer-car {
+
+	.solutions {
+		padding: 40px 0 25px;
+		font-family: f(comic);
+		font-size: 85px;
+		color: c(white);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include under(md) {
+			font-size: 65px;
+		}
+		@include under(sm) {
+			font-size: 45px;
+			padding: 25px 0 15px;
+		}
+		@include under(invitation) {
+			font-size: 35px;
+			padding: 20px 0 10px;
+		}
+		@include under(xs) {
+			flex-direction: column;
+		}
+
+		.money {
+			font-family: f(sans);
+			opacity: .8;
+		}
+		.amigo {
+			font-family: f(sans);
+		}
+
+		&__box {
+
+		}
+
+		&__img {
+			width: 500px;
+			padding: 15px 10px 0;
+			@include under(md) {
+				width: 400px;
+				padding: 10px 5px 0;
+			}
+			@include under(sm) {
+				width: 300px;
+			}
+			@include under(invitation) {
+				width: 220px;
+				padding: 5px 5px 0;
+			}
+		}
+	}
+
+	&__link-home {
+		@extend %button-with-logo;
+		border-width: 2px;
+	}
+	
+	.hide-mobile {
+		display: flex;
+		@include under(sm) {
+			display: none !important;
+		}
+	}
+
+	.show-mobile {
+		display: none;
+		@include under(sm) {
+			display: flex !important;
+		}	
+	}
+}
+
+footer.is-press {
+	background-color: #eb3796 !important;
+	background-image: repeating-linear-gradient(90deg, #eb3796 0%, #863797 100%) !important;
+}
+
+footer.is-about {
+	background-color: #00a8e1 !important;
+    background-image: repeating-linear-gradient(90deg, #00a8e1 0%, #00b550 100%) !important;
+}

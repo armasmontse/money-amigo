@@ -1,0 +1,86 @@
+.yah {
+    padding: 10vh 0;
+
+    &__text {
+        font-family: f(comic);
+        font-weight: 500;
+        color: #5B5B5B;
+        position: relative;
+
+        &-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            margin: 20px 0;
+        }
+
+        span {
+            // Inline block para poder mover el margin al gusto
+            display: inline-block;
+
+            &:nth-of-type(1) {
+				font-size: 262px;
+				
+				@include under(sm) {
+                    font-size: 180px;
+                }
+
+                @include under(xs) {
+                    font-size: 120px;
+                }
+            }
+
+            &:nth-of-type(2) {
+                margin-top: -0.5em;
+                margin-left: 90px;
+				font-size: 82px;
+				
+				@include under(md) {
+                    font-size: 64px;
+                }
+
+                @include under(xs) {
+                    font-size: 32px;
+                    margin-left: 50px;
+                }
+            }
+        }
+    }
+
+    &__text--bottom {
+
+        p {
+            font-family: f(sans);
+            font-size: 21px;
+            color: #B3B3B3;
+
+            @include under(sm) {
+                text-align: center;
+			}
+
+            img {
+                display: inline-block;
+				height: 18px;
+				margin-top: 3px;
+                width: auto;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    &__image {
+        width: 100%;
+        max-width: 350px;
+
+        &-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            margin: 20px 0;
+        }
+    }
+}

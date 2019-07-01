@@ -1,0 +1,179 @@
+.onepercent {
+	display: flex;
+	background-color: transparent;
+	position: relative;
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	&__container {
+		width: 100%;
+		min-height: $full-height;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+
+		@include under(sm){
+			height: $responsive-full-height;
+			transition: height 9999s;
+			width: 100%;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__col {
+		flex: 1;
+
+		&--text {
+			margin-top: -35px;
+		}
+	}
+
+	&__shadow {
+		box-shadow: inset 0px 0px 80px 40px white;
+		width: 100%;
+		height: 100%;
+		position: absolute; 
+		z-index: 5;
+		left:0;
+		top:0;
+
+		@include under(sm) {
+			box-shadow: inset 0px 0px 40px 20px white;
+		}
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+
+		@include under(sm) {
+			flex-direction: column;
+		}
+	}
+
+	&__text {
+		font-family: f(comic);
+		
+		&--includes {
+			font-size: 54px;
+			font-family: f(comic);
+			font-weight: 400;
+			margin: 40px 0;
+			width: 100%;
+
+			@include under(sm){
+				font-size: 32px;
+				text-align: center;
+			}
+
+			display: flex;
+			align-items: center;
+
+			@include under(sm) {
+				flex-direction: column;
+			}
+
+			img {
+				height: 52px;
+				margin-top: 10px;
+				width: auto;
+				display: inline-block;
+				vertical-align: bottom;
+				margin-right: 10px;
+
+				@include under(sm) {
+					height: 32px;
+				}
+			}
+
+			span {
+				color: background('green');
+				display: inline-block;
+
+				&.gray {
+					color: #C7C7C7;
+				}
+
+				strong {
+					font-weight: 500;
+				}
+			}
+		}
+
+		&--one {
+			font-size: 550px;
+			font-weight: 500;
+			text-align: right;
+
+			@include under(md) {
+				font-size: 350px;
+				text-align: center;
+			}
+
+			@include under(xs) {
+				font-size: 200px;
+
+				small {
+					font-size: 100px;
+				}
+			}
+		}
+
+		&--percent {
+			font-weight: 500;
+			font-size: 250px;
+			vertical-align: middle;
+
+			@include under(md) {
+				font-size: 220px;
+			}
+
+			@include under(xs) {
+				font-size: 100px;
+			}
+		}
+
+		&--cashback {
+			font-size: 150px;
+			font-weight: 700;
+
+			@include under(md) {
+				text-align: center;
+			}
+
+			@include under(sm) {
+				font-size: 120px;
+			}
+
+			@include under(xs) {
+				font-size: 80px;
+			}
+		}
+
+		&--buy {
+			font-size: 64px;
+			font-weight: 700;
+
+			@include under(sm) {
+				font-size: 52px;
+				text-align: center;
+			}
+
+			@include under(xs) {
+				font-size: 42px;
+			}
+		}
+
+	}
+
+	&__sonry {
+		display: flex;
+		align-items: flex-end;
+
+		@include under(md) {
+			justify-content: center;
+		}
+	}
+}
+

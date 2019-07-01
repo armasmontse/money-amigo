@@ -1,0 +1,168 @@
+.release {
+
+	.nota{
+		
+		&__contenedor {
+			width: 80%;
+			margin: 70px auto 150px;
+			@include under(md){
+		        width: 90%;
+		        margin: 50px auto 100px;
+		    }
+		    @include under(sm){
+		        width: 95%;
+		        margin: 35px auto 60px;
+		    }
+		}
+
+		&__ttl-pagina {
+			@extend %titulo-pagina-release;
+			color: c(green);
+			text-align: center;
+			margin-bottom: 45px;
+			@include under(sm){
+		        margin-bottom: 20px;
+		    }
+		}
+
+		&__categoria {
+			@extend %releases-categoria-nota;
+			margin-bottom: 10px;
+		}
+
+		&__fecha {
+			@extend %releases-fecha-nota;
+			margin-bottom: 80px;
+			@include under(md){
+		        margin-bottom: 50px;
+		    }
+		    @include under(sm){
+		        margin-bottom: 25px;
+		    }
+		}
+
+		&__titulo {
+			@extend %releases-titulo-nota;
+			text-align: center;
+			margin-bottom: 45px;
+			@include under(md){
+		        margin-bottom: 35px;
+		    }
+		    @include under(sm){
+		        margin-bottom: 20px;
+		    }
+		}
+
+		&__lista-redes{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 40px;
+			@include under(sm){
+		        margin-bottom: 20px;
+		    }
+		}
+
+		&__item{
+			margin: 0 25px;
+			@include under(sm-mobile) {
+				margin: 0 15px;
+			}
+		}
+
+		&__img-redes{
+			width: 40px;
+		}
+
+		.linea-division{
+			width: 100%;
+			border: 1px solid c(gray-light);
+			margin-bottom: 50px;
+			@include under(sm) {
+				margin-bottom: 20px;
+			}
+		}
+
+		.contenido-nota {
+
+			&__contenedor {
+				width: 80%;
+				margin: 0 auto;
+				@include under(sm-mobile) {
+					width: 90%;
+				}
+			}
+
+			&__estracto {
+				@extend %paragraph-release-estracto;
+				margin-bottom: 50px;
+				@include under(sm) {
+					margin-bottom: 20px;
+				}
+			}
+
+			.img-share {
+
+				&__box{
+
+				}
+
+				&__imagen{
+
+				}
+
+				&__pleca-box{
+					width: 100%;
+					display: flex;
+					background: #666;
+					padding: 10px 0;
+					margin-bottom: 20px;
+					@include under(sm-mobile) {
+						padding: 5px 0;
+					}
+				}
+
+				&__lista-redes {
+					display: flex;
+				}
+
+				&__item {
+					margin-left: 25px;
+					@include under(sm-mobile) {
+						margin-left: 15px;
+					}
+				}
+
+				&__img-redes {
+					width: 30px;
+					@include under(sm-mobile) {
+						width: 26px;
+					}
+				}
+
+				&__pie-foto {
+
+					&--texto {
+						@extend %paragraph-release-pie-foto;
+						margin-bottom: 25px;
+					}
+				}
+			}
+
+			&__texto {
+				@extend %paragraph-release-texto;
+				margin-bottom: 50px;
+				@include under(sm-mobile) {
+					margin-bottom: 25px;
+				}
+
+				&.margin-top {
+					margin-top: 50px;
+					@include under(sm) {
+						margin-top: 25px;
+					}
+				}
+			}
+		}
+	}	
+}

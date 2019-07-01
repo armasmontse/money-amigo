@@ -1,0 +1,7 @@
+body, html{ 
+	@include clearfix;
+	font-family: f(sans);
+	color: c();
+}
+
+body {}

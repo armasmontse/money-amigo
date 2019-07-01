@@ -1,0 +1,117 @@
+.where-amigos-meet {
+    padding: 20vh 0;
+
+    &__text {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+
+        &-box {
+            // Box for containing the text with the indent but centering horizontally
+        }
+
+        p {
+            font-family: f(comic);
+            font-weight: 500;
+            color: #5B5B5B;
+            position: relative;
+
+            span {
+                &:nth-of-type(1) {
+                    margin-left: 0;
+					font-size: 100px;
+					
+					@include under(sm) {
+                        font-size: 75px;
+                    }
+
+                    @include under(xs) {
+                        font-size: 40px;
+                    }
+                }
+    
+                &:nth-of-type(2) {
+                    margin-left: 60px;
+                    font-size: 164px;
+					line-height: 40%;
+					
+					@include under(sm) {
+                        font-size: 78px;
+                        margin-left: 45px;
+                    }
+
+                    @include under(xs) {
+                        font-size: 64px;
+                        margin-left: 45px;
+                    }
+                }
+    
+                &:nth-of-type(3) {
+                    margin-left: 200px;
+                    font-size: 216px;
+					line-height: 75%;
+					
+					@include under(sm) {
+                        font-size: 140px;
+                    }
+
+                    @include under(xs) {
+                        font-size: 82px;
+                        margin-left: 90px;
+                    }
+                }
+            }
+
+            
+        }
+    }
+
+    &__social {
+        display: flex; 
+        justify-content: center;
+        
+        flex-flow: row wrap;
+		padding: 20px 0;
+
+        li {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+            padding: 20px;
+            flex-basis: auto;
+
+            &:nth-child(even) {
+                justify-content: flex-start;
+            }
+
+            &:nth-child(odd) {
+                justify-content: flex-end;
+            }
+            
+            @include under(xs) {
+				width: 50%;
+            }
+
+            a {
+				border-radius: 50%;
+                display: flex;
+                color: white;
+                font-size: 80px;
+                width: 130px;
+				height: 130px;
+				min-width: 130px;
+                min-height: 130px;
+                justify-content: center;
+                align-items: center;
+
+                @include under(sm) {
+                    width: 100px;
+					height: 100px;
+					min-width: 100px;
+                    min-height: 100px;
+                    font-size: 45px;
+                }
+            }
+        }
+    }
+}

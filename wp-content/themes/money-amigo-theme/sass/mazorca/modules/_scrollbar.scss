@@ -1,0 +1,32 @@
+.scrollbar {
+	position: fixed;
+	height: 80vh;
+	width: 10px;
+	top: 10vh;
+	right: 10px;
+	border-radius: 5px;
+	background-color: transparent;
+	z-index: 999999;
+
+	&__position {
+		border-radius: 2px;
+		position: absolute;
+		top: 1px;
+		display: inline-block;
+		height: 5px;
+		width: 100%;
+		background-color: #fff;
+	}
+
+	@include under(sm) {
+		display: none;
+	}
+}
+
+::-webkit-scrollbar {
+display: none;
+}
+
+html {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}

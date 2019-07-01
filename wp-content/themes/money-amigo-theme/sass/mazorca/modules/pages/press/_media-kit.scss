@@ -1,0 +1,141 @@
+.press {
+
+	/* M e d i a   k i t */
+	.media-kit {
+		
+		&__contenedor {
+			
+		}
+
+		&__titulo {
+			@extend %titulo-press-seccion-media;
+			margin-bottom: 100px;
+		
+		    @include under(bag){
+		        margin-bottom: 70px;
+		    }
+		    @include under(sm){
+		        margin-bottom: 45px;
+		    }
+		}
+
+		.circulos {
+			width: 50vw;
+			margin: 0 auto 100px;
+			@include under(lg){
+		    	width: 70vw;
+		    	margin: 0 auto 75px; 
+		    }
+		    @include under(sm){
+		    	margin: 0 auto 45px; 
+		    }
+
+			&__contenedor {
+				width: 100%;
+				display: flex;
+				justify-content: space-around;
+				@include under(bag){
+			        flex-wrap: wrap;
+			    }
+			}
+			&__box {
+				@include under(bag){
+			    	width: 50%;
+			    	margin-bottom: 30px;  
+			    }
+
+				&-links {
+					display: flex;
+				    width: 70%;
+				    margin: 15px auto 0 ;
+				    justify-content: center;
+				    @extend %link-press-descarga;
+
+				    a {
+				    	padding: 0 10px;
+				    	text-decoration: underline;
+				    }
+				}
+			}
+			&__img {
+				width: 80%;
+				margin: 0 auto;
+			}
+		}
+
+		.personaje {
+			width: 70vw;
+			margin: 0 auto 200px;
+			@include under(lg){
+		    	width: 90vw; 
+		    	margin: 0 auto 140px; 
+		    }
+		    @include under(sm){
+		    	margin: 0 auto 70px; 
+		    }
+
+			&__contenedor {
+				width: 100%;
+				display: flex;
+				justify-content: space-around;
+			}
+
+			&__box {
+				
+				&-links {
+					display: flex;
+				    width: 50%;
+				    margin: 15px auto 0 ;
+				    justify-content: center;
+				    @extend %link-press-descarga;
+
+				    a {
+				    	padding: 0 10px;
+				    	text-decoration: underline;
+				    }
+				}
+			}
+			&__img {
+				
+			}
+		}
+
+		.aplicacion {
+			width: 85vw;
+			margin: 0 auto 160px;
+
+			@include under(lg){
+		    	width: 90vw; 
+		    	margin: 0 auto 100px; 
+		    }
+		    @include under(sm){
+		    	margin: 0 auto 70px; 
+		    }
+
+			&__contenedor {
+				width: 100%;
+				display: flex;
+				justify-content: space-around;
+			}
+
+			&__box {
+				
+				&-links {
+					display: flex;
+				    width: 50%;
+				    margin: 15px auto 0 ;
+				    justify-content: center;
+				    @extend %link-press-descarga;
+
+				    a {
+				    	padding: 0 10px;
+				    	text-decoration: underline;
+				    }
+				}
+			}
+			&__img {
+				
+			}
+		}	
+	}
+}

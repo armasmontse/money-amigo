@@ -1,0 +1,130 @@
+.smile {
+
+	&__container {
+		
+		&--for-hero {
+			height: 100vh;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: white;
+
+			@include under(mn) {
+				// Para que no cambie de tamaño el hero cuando se oculte el navbar en mobile chrome.
+				transition: height 999999s;
+			}
+
+			.smile__circle {
+				height: 327px;
+				width: 327px;
+				border-radius: 100%;
+				position: relative;
+				top: 23%;
+				margin: 0 auto;
+
+				@include under(sm) {
+					height: 250px;
+					width: 250px;
+				}
+
+				img {
+					@include center('xy');
+					height: 239px;
+					width: 239px;
+
+					@include under(sm) {
+						height: 177px;
+						width: 177px;
+					}
+				}
+			}
+
+			.smile__box {
+				position: relative;
+				top: 327px;
+				margin: 0 auto;
+				width: 100%;
+
+				@include under(sm) {
+					top: 250px;
+				}
+			}
+		}
+	}
+
+	&__yourmoney {
+		height: 54px;
+
+		@include under(sm) {
+			height: 48px;
+		}
+	}
+
+	&__fast {
+		height: 54px;
+
+		@include under(sm) {
+			height: 42px;
+		}
+	}
+
+	&__box {
+		padding: 20px 0;
+	}
+
+	&__text {
+		font-family: f(comic);
+		text-align: center;
+
+		&--money{
+			font-size: 54px;
+			font-weight: 700;
+
+			@include under(sm) {
+				font-size: 41px;
+			}
+		}
+		
+		&--fast {
+			font-size: 36px;
+			font-weight: 400;
+
+			@include under(sm) {
+				font-size: 28px;
+			}
+		}
+	}
+
+	&__lang {
+		position: absolute;
+		bottom: 40px;
+		left: 0;
+		right: 0;
+		display: flex; 
+		justify-content: center;
+
+		.action__lang {
+			min-width: auto;
+
+			ul {
+				display: flex;
+				justify-content: center;
+
+				li {
+					&.current-language {
+						a {
+							color: white;
+							border: 1px solid white;
+						}
+					}
+
+					a {
+						border: 1px solid #DEDEDE;
+						color: #DEDEDE;
+					}
+				}
+			}
+		}
+	}
+}

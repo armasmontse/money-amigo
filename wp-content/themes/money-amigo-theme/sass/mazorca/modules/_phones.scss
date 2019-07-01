@@ -1,0 +1,58 @@
+.phones {
+	display: flex;
+	background-color: transparent;
+
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		
+		background-color: transparent;
+		
+		width: 100%;
+	}
+
+	&__col {
+		height: calc(#{$full-height} - 100px);
+		width: 45%;
+
+		display: flex;
+		align-items: center;
+
+		@include under(sm){
+			height: $responsive-full-height;
+			transition: height 9999s;
+			width: 100%;
+			margin-bottom: 30px;
+		}
+
+		&:first-child {
+			justify-content: flex-end;
+			margin-right: 10px;
+
+			@include under(sm){
+				justify-content: center;
+				margin-right: 0;
+			}
+		}
+
+		&:last-child {
+			justify-content: flex-start;
+			margin-left: 10px;
+
+			@include under(sm){
+				justify-content: center;
+				margin-left: 0;
+			}
+		}
+	}
+
+	&__image {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		width: auto;
+		display: inline-block;
+	}
+}

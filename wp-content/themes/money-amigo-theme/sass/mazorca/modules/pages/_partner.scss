@@ -1,0 +1,330 @@
+.partner {
+		
+	/* G r a d i e n t e */
+	.gradiente {
+		width: 100%;
+		height: 33vh;
+		background-color: #eb3796;
+    	background-image: repeating-linear-gradient(152.3deg, #eb3796 0%, #863797 100%, #eb3796 100%);
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	 @include under(sm){
+	        height: 20vh;
+	        padding: 45px 0;
+	    }
+
+    	&__ttl {
+    		@extend %titulo-partner;
+    	}
+	}
+	
+	/* P e r s o n a j e */
+	.personaje {
+
+		&__contenedor {
+			width: 80%;
+			max-width: 1650px;
+			margin: 100px auto;
+			@include under(md){
+				width: 90%;
+		    	margin: 70px auto;
+		    }
+		    @include under(sm){
+		    	width: 95%;
+		    	margin: 45px auto;
+		    }
+		}
+
+		&__img {
+			margin-bottom: 25px;
+			@include under(sm){
+		    	margin-bottom: 18px;
+		    }
+		}
+
+		&__texto {
+			@extend %paragraph-partner-personaje;
+		}
+
+	}
+	
+	/* I c o n o s   d o i n g */
+	.iconos-doing {
+		&__contenedor {
+			width: 70%;
+		    margin: 0 auto;
+		    max-width: 1600px;
+		    @include under(md){
+				width: 85%;
+		    }
+		    @include under(sm){
+		    	width: 95%;
+		    }
+		}
+
+		&__ttl {
+			width: auto;
+			margin: 0 auto 70px;
+			@include under(md){
+		        margin: 0 auto 50px;
+		    }
+		    @include under(sm){
+		        margin: 0 auto 35px;
+		    }
+
+			&--morado {
+				@extend %titulo-partner-morado;
+				margin: 80px 0 50px;
+				@include under(md){
+			        margin: 60px 0 35px;
+			    }
+			    @include under(sm){
+			        margin: 40px 0 25px;
+			    }
+			}
+		}
+
+		&__lista {
+			display: flex;
+
+			&.center {
+				justify-content: center;
+			}
+		}
+
+		&__item {
+			width: calc(100% / 3);
+			@include under(sm) {
+				width: auto;
+				margin: 0 2vw;
+			}
+
+			&--centrados {
+				margin: 0 2vw;
+			}
+			
+			&--img {
+				width: 220px;
+				margin: 0 auto;
+			}
+
+			&--frase {
+				@extend %frase-iconos-doing;
+				@extend %gradiente-texto-rosa-morado;
+				margin-top: 20px;
+				position: relative;
+				@include under(sm){
+			        margin-top: 15px;
+			    }
+			    @include under(xs){
+			       display: flex;
+			    }
+			}
+		}
+	}
+	
+	/* I c o n o s   g o o d */
+	.iconos-good {
+		&__contenedor {
+			width: 85%;
+    		margin: 0 auto;
+    		@include under(md){
+				width: 90%;
+		    }
+		    @include under(sm){
+		    	width: 95%;
+		    }
+		}
+
+		&__ttl {
+			@extend %titulo-partner-morado;
+			margin: 80px 0 50px;
+			@include under(md){
+		        margin: 60px 0 35px;
+		    }
+		    @include under(sm){
+		        margin: 40px 0 25px;
+		    }
+		}
+
+		&__lista {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			@include under(md){
+		    	justify-content: flex-start;
+		    }
+		}
+
+		&__item {
+			width: calc(100% / 4);
+			padding: 0 15px;
+			text-align: center;
+			margin-bottom: 60px;
+			@include under(md){
+		        width: calc(100% / 2);
+		    }
+		}
+
+		&__img {
+			width: 250px;
+			margin: 0 auto 30px;
+		}
+
+		&__texto {
+			@extend %texto-iconos-good-gris;
+			margin-bottom: 30px;
+		}
+
+		&__link {
+			@extend %texto-iconos-good-gris;
+			text-decoration: underline;
+		}
+	}
+
+	/* F o r m u l a r i o */
+	.formulario {
+		&__contenedor {
+			margin: 0 auto 70px;
+		}
+
+		&__ttl {
+			@extend %titulo-partner-formulario;
+			margin-top: 60px;
+			margin-bottom: 35px;
+			@include under(md){
+		       margin-bottom: 15px;
+		    }
+		}
+
+		&__recuadro {
+			@extend %gradiente-background-rosa-morado;
+			width: 90%;
+			max-width: 1300px;
+			margin: 0 auto;
+			border-radius: 50px;
+			padding: 60px;
+			@include under(sm){
+		        padding: 25px;
+		    }
+		}
+
+		&__img-hola {
+			width: 50%;
+			max-width: 400px;
+			margin: 0 auto 25px;
+			@include under(sm){
+		        margin: 0 auto 15px;
+		    }
+		}
+
+		&__row {
+			display: flex;
+			margin-bottom: 50px;
+			@include under(md){
+		        margin-bottom: 35px;
+		    }
+		    @include under(sm){
+		        margin-bottom: 20px;
+		    }
+		    @include under(xs){
+		        flex-direction: column;
+    			text-align: center;
+		    }
+		}
+
+		&__label {
+			@extend %label-partner-formulario;
+			@include under(xs){
+		        margin-bottom: 15px;
+		    }
+		}
+
+		&__input {
+			@extend %placeholder-partner-formulario;
+			background: transparent;
+			border: none;
+			border-bottom: 2px solid c(white);
+			padding-left: 30px;
+			flex: 1;
+			&::placeholder {
+				color: c(white);
+			}
+			@include under(md){
+		        padding-left: 20px;
+		    }
+		    @include under(sm){
+		        padding-left: 10px;
+		    }
+
+			&--submit {
+				@extend %placeholder-partner-formulario;
+				font-weight: 500;
+				font-size: 27px;
+				color: c(purple);
+			    width: 20%;
+			    margin: 0 auto;
+			    border-radius: 25px;
+			    background: white;
+			    border: none;
+			    cursor: pointer;
+			    @include under(md){
+			        width: 30%;
+			    }
+			    @include under(sm){
+			        width: 40%;
+			    }
+			}
+		}
+
+		&__textarea {
+			margin: 50px 0 30px;
+			height: 200px;
+			border: none;
+			border-radius: 25px;
+			padding: 20px;
+			font-size: 30px;
+			color: c(gray);
+			font-family: f(comic);
+			@include under(md){
+		        margin: 35px 0 30px;
+		    }
+		    @include under(sm){
+		        margin: 20px 0 30px;
+		    }
+		    &::placeholder {
+		    	color: c(gray);
+				font-size: 30px;
+				@include under(md){
+			        font-size: 28px;
+			    }
+			    @include under(sm){
+			        font-size: 22px;
+			    }
+			    @include under(sm-mobile){
+			        font-size: 18px;
+			    }
+		    }
+		}
+
+		&__text-select {
+			@extend %text-select-partner-formulario;
+			@include under(xs){
+		        text-align: center;
+		    }
+		}
+
+		&__select {
+		    @extend %text-select-partner-formulario;
+			color: c(pink);
+			text-decoration: underline;
+			background: c(white);
+			border: none;
+
+			option {
+				color: red;
+			}
+		}
+	}
+}
